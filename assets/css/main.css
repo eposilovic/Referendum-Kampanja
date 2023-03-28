@@ -3475,6 +3475,7 @@ input, select, textarea {
 			width: 50%;
 			max-width: 48rem;
 			margin: 0 auto;
+			position: relative;
 		}
 
 		.banner.style1 .image {
@@ -8601,3 +8602,44 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+
+.text-slider-1, .text-slider-2, .text-slider-3{
+	position: absolute;
+  	display: block;
+	top: -150px;
+	animation-duration: 15s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.text-slider-1{
+	animation-name: anim-1;
+}
+
+.text-slider-2{
+	animation-name: anim-2;
+}
+
+.text-slider-3{
+	animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+	0%, 8.3% { left: 0%; opacity: 0; }
+  8.3%,25% { left: 16%; opacity: 1; }
+  33.33%, 100% { left: 0%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: 0%; opacity: 0; }
+  41.63%, 58.29% { left: 16%; opacity: 1; }
+  66.66%, 100% { left: 0%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: 0%; opacity: 0; }
+  74.96%, 91.62% { left: 16%; opacity: 1; }
+  100% { left: 0%; opacity: 0; }
+}
+
